@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #424242;
+}
+
+main {
+  padding: 0 1em;
+}
+
+header {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2em;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul>li {
+  padding: 5px 10px;
+  display: inline;
+}
+
+main img {
+  display: block;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+footer {
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-toggler {
+  width: 16px;
+}
+
+.nav-toggler .toggle-line {
+  transition: all 0.15s ease;
+  background: #7b809a;
+  border-radius: 0.1rem;
+  position: relative;
+  display: block;
+  height: 2px;
+}
+
+.nav-toggler .toggle-line:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.nav-toggler {
+  display: none;
+}
+
+/* For mobile phones: */
+@media (max-width: 480px) {
+  header {
+    justify-content: start;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  header h1 {
+    margin-left: 0.5em;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+    .nav-toggler {
+      display: block;
+    }
+}
+
+/* For Tablet phones: */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+
+
+}
+
+@media (min-width: 1281px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  header h1 {
+    margin-left: 1em;
+  }
+}

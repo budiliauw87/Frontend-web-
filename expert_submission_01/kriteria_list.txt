@@ -1,0 +1,7 @@
+Fitur yang harus ada pada aplikasi: 
+- App Bar (Navigation Bar) / Home, Favorite, About Us
+- Hero Element (Jumbotron Element)
+- Daftar Restoran
+- Footer
+- Responsibilitas Tampilan / Grid CSS atau Flexbox
+- Aksesibilitas Website
