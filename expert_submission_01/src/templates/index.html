@@ -4,17 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Practice App</title>
 </head>
 
 <body>
+  <nav class="nav-drawer">
+    <ul class="navigation">
+      <li class="nav-item active"><a href="#">Home</a></li>
+      <li class="nav-item"><a href="#">Favorite</a></li>
+      <li class="nav-item"><a href="#">About Us</a></li>
+    </ul>
+  </nav>
   <header>
-    <div class="nav-toggler">
+    <a href="#" class="nav-toggler ">
       <div class="toggle-line"></div>
       <div class="toggle-line"></div>
       <div class="toggle-line"></div>
-    </div>
+    </a>
     <h1>Practice Grid Css</h1>
     <ul class="navigation">
       <li class="nav-item active"><a href="#">Home</a></li>
@@ -41,6 +47,30 @@
   </footer>
 
   <script type="text/javascript">
+    let navdrawer = document.querySelector(".nav-drawer");
+    let hambuger = document.querySelector(".nav-toggler");
+    let mainElement = document.querySelector("body");
+    let navItems = document.querySelectorAll('.nav-item');
+    hambuger.addEventListener('click', event => {
+      navdrawer.classList.toggle('open');
+      event.stopPropagation();
+    });
+
+    mainElement.addEventListener('click', event => {
+      navdrawer.classList.remove('open');
+      event.stopPropagation();
+    });
+    for (let i = 0; i < navItems.length; i++) {
+      navItems[i].addEventListener("click", function () {
+        Array.from(navItems).map(el => {
+          el.classList.remove('active');
+        });
+        navItems[i].classList.toggle("active");
+      });
+    }
+
+
+
   </script>
 </body>
 
