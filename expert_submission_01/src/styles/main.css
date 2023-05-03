@@ -10,6 +10,7 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
+  background: #eee;
 }
 
 body {
@@ -28,26 +29,45 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2em;
+  padding: 1.5em 2em;
+  background: #fff;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 header ul {
+  border-style: none;
   list-style: none;
 }
 
 header ul>li {
-  padding: 5px 10px;
+  padding: 8px 16px;
   display: inline;
+}
+
+header ul>li>a {
+  text-decoration: none;
+  color: #424242 !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.active {
+  border-radius: 8px;
+  background: #eee;
 }
 
 main img {
   display: block;
   border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 footer {
-  padding: 2em;
+  font-size: medium;
+  padding: 1.5em 2em;
   width: 100%;
   text-align: center;
 }
@@ -73,6 +93,23 @@ footer {
   display: none;
 }
 
+.jumbotron {
+
+  border-radius: 1em;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 1.2em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+}
+
+.jumbotron h3 {
+  font-family: sans-serif;
+  font-size: 1.8em;
+  padding: 3em;
+  margin: 0 auto;
+}
+
 /* For mobile phones: */
 @media (max-width: 480px) {
   header {
@@ -85,23 +122,24 @@ footer {
 
   header h1 {
     margin-left: 0.5em;
+    font-size: 1.7em;
   }
 
-  main {
+  .wrapper-catalog {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-    .nav-toggler {
-      display: block;
-    }
+
+  .nav-toggler {
+    display: block;
+  }
 }
 
 /* For Tablet phones: */
 @media (min-width: 481px) and (max-width: 1024px) {
 
-
-  main {
+  .wrapper-catalog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -110,7 +148,7 @@ footer {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
 
-  main {
+  .wrapper-catalog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -121,7 +159,7 @@ footer {
 }
 
 @media (min-width: 1281px) {
-  main {
+  .wrapper-catalog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
