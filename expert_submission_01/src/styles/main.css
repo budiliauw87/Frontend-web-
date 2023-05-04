@@ -56,8 +56,6 @@ header ul>li {
   color: #424242 !important;
 }
 
-
-
 header ul>li>a {
   text-decoration: none;
   font-size: medium;
@@ -73,13 +71,24 @@ header ul>li:hover {
 .text-white {
   color: white !important;
 }
-
+.skip-link{
+  top:-40px;
+  left:0;       
+  position: absolute;
+  z-index: 100;
+  padding:8px;
+}
+.skip-link:focus {
+  top: 0;
+  left:20px
+}
 .active {
   border-radius: 8px;
   background: #eee;
 }
 
-.text-center {
+.subheading {
+  margin:1rem 0;
   text-align: center !important;
 }
 
@@ -93,7 +102,8 @@ footer {
 }
 
 .nav-toggler {
-  width: 16px;
+  width: 45px;
+  padding:6px 12px;
 }
 
 .nav-toggler .toggle-line {
@@ -113,11 +123,10 @@ footer {
 }
 
 .jumbotron {
+  width: 100%;
   border-radius: 1em;
   background-color: #fff;
-  margin-bottom: 1.2em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
 }
 
 
@@ -250,15 +259,13 @@ footer {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
-
-
   .nav-toggler {
     display: block;
   }
 
   .jumbotron img {
     max-height: 200px;
+    width:100%;
   }
 }
 
@@ -282,10 +289,7 @@ footer {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  main {
-    padding: 0 3rem;
-  }
-
+  
   .wrapper-catalog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -301,12 +305,12 @@ footer {
 
 }
 
-@media (min-width: 1281px) {
-  main {
-    padding: 0 5rem;
-  }
-
+@media (min-width: 1200px) {
+  
+  
   .wrapper-catalog {
+    margin: 0 auto;
+      width: 1000px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -315,7 +319,10 @@ footer {
   header h1 {
     margin-left: 1em;
   }
-
+  .jumbotron {
+    margin: 0 auto;
+    width: 1000px;
+  }
   .jumbotron img {
     max-height: 300px;
   }

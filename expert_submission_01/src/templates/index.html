@@ -8,15 +8,16 @@
 </head>
 
 <body>
+  <a href="#maincontent" class="skip-link" tabindex="1">Skip to content</a>
   <nav class="nav-drawer">
     <ul class="navigation">
-      <li class="nav-item active"><a href="/">Home</a></li>
-      <li class="nav-item"><a href="#">Favorite</a></li>
-      <li class="nav-item"><a href="https://github.com/budiliauw87" target="_blank">About Us</a></li>
+      <li class="nav-item active"><a href="/" tabindex="3">Home</a></li>
+      <li class="nav-item"><a href="#" tabindex="4">Favorite</a></li>
+      <li class="nav-item"><a href="https://github.com/budiliauw87" target="_blank" tabindex="5">About Us</a></li>
     </ul>
   </nav>
   <header>
-    <a href="#" class="nav-toggler ">
+    <a href="#" class="nav-toggler" tabindex="2" aria-label="toggle drawer">
       <div class="toggle-line"></div>
       <div class="toggle-line"></div>
       <div class="toggle-line"></div>
@@ -28,11 +29,11 @@
       <li class="nav-item"><a href="https://github.com/budiliauw87" target="_blank">About Us</a></li>
     </ul>
   </header>
-  <main>
+  <main id="maincontent">
     <div class="jumbotron">
       <img src="./images/heros/hero-image.jpg" alt="This jumbotron image">
     </div>
-    <h2 class="text-center">Explore Restaurant</h2>
+    <h2 class="subheading">Explore Restaurant</h2>
     <div class="wrapper-catalog">
       <div class="catalog-item">
         <img src="https://restaurant-api.dicoding.dev/images/medium/41" class="thumbnail" alt="Bring Your Phone Cafe">
@@ -312,16 +313,19 @@
       event.stopPropagation();
     });
     for (let i = 0; i < navItems.length; i++) {
-      navItems[i].addEventListener("click", function () {
+      navItems[i].addEventListener("click", () => {
+        let currentText = navItems[i].textContent;
+        console.log(currentText);
         Array.from(navItems).map(el => {
-          el.classList.remove('active');
+          if (currentText != el.textContent) {
+            el.classList.remove('active');
+          } else if (currentText == el.textContent) {
+            el.classList.toggle('active');
+          }
         });
         navItems[i].classList.toggle("active");
       });
     }
-
-
-
 
   </script>
 </body>
