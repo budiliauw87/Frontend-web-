@@ -35,8 +35,8 @@ header {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-h2, h3 {
-  text-align: center;
+h2,
+h3 {
   color: #424242;
   padding: 8px 0;
   margin-bottom: 1rem;
@@ -44,19 +44,30 @@ h2, h3 {
 }
 
 header ul {
+
   border-style: none;
   list-style: none;
 }
 
 header ul>li {
+  transition: .4s ease-in-out;
   padding: 8px 16px;
   display: inline;
+  color: #424242 !important;
 }
+
+
 
 header ul>li>a {
   text-decoration: none;
   font-size: medium;
-  color: #424242 !important;
+
+}
+
+header ul>li:hover {
+  transition: .4s ease-in-out;
+  border-radius: 8px;
+  background: #eee;
 }
 
 .text-white {
@@ -68,7 +79,9 @@ header ul>li>a {
   background: #eee;
 }
 
-
+.text-center {
+  text-align: center !important;
+}
 
 
 footer {
@@ -128,6 +141,7 @@ footer {
   transform: translate(-250px, 0);
   transition: transform 0.3s ease-in-out;
   padding: 8px 16px;
+  z-index: 1;
 }
 
 .nav-drawer.open {
@@ -147,30 +161,73 @@ footer {
 }
 
 .nav-drawer ul>li {
+  transition: .4s ease-in-out;
   padding: 8px 16px;
   margin-top: 5px;
 }
 
+.nav-drawer ul>li:hover {
+  transition: .4s ease-in-out;
+  border-radius: 8px;
+  background: #eee;
+}
+
 .catalog-item {
+  position: relative;
   border-radius: 1em;
   background-color: #fff;
   margin-bottom: 1.2em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
+.catalog-item:hover{
+  transition: .3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 4px 4px 4px;
+}
+
+.catalog-item .thumbnail {
+  
+  width: 100%;
+  max-height: 200px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.city {
+  top: 1rem;
+  position: absolute;
+  inline-size: max-content;
+  padding: 8px 16px;
+  background-color: #424242;
+  color: #eee;
+  opacity: 0.7;
+}
+
 .catalog-item a {
   text-decoration: none;
 }
 
-.catalog-item p {
+.catalog-item h2 {
+  margin: 0 1rem;
+}
+
+.rating {
+  padding: 0 1rem 1rem;
+}
+
+.catalog-body {
   padding: 0 1rem 1.5rem 1rem;
 }
 
-.thumbnail {
-  width: 100%;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
+.catalog-body p {
+  overflow: hidden;
+  max-height: 3.2em;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
+
 
 /* For mobile phones: */
 @media (max-width: 480px) {
@@ -225,17 +282,17 @@ footer {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  main {
+    padding: 0 3rem;
+  }
 
   .wrapper-catalog {
-    padding: 0 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
-  .jumbotron {
-    padding: 0 3rem;
-  }
+
 
   .jumbotron img {
     max-height: 250px;
