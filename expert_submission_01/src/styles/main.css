@@ -112,6 +112,8 @@ footer {
 }
 
 .nav-toggler {
+  border: none;
+  background: none;
   padding: 16px 10px;
   height: 44px;
   width: 45px;
