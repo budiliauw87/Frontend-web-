@@ -1,0 +1,99 @@
+app-bar {
+    padding: 9px;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+app-bar button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#search-form{
+    margin-right: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding:0 15px;
+    border: 1px solid #b8b6b6;
+   
+}
+
+#search-form i{
+    color: #b8b6b6;
+}
+#search-form input[type="text"] {
+    width:100%;
+    margin: 0 15px;
+    padding: 8px;
+    border: none;
+}
+
+#search-form input:focus{
+    outline: none;
+}
+
+.brand {
+    margin-right: 15px;
+    font-size: 1.5em;
+    color: inherit;
+    margin-left: 15px;
+}
+
+.navbar {
+    margin-left: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a {
+    color: black;
+    padding-right: 15px;
+    font-size: 1.3em;
+}
+
+#menuDrawer{
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 640px) {
+    #menuDrawer{
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }
+    .brand {
+        display: none;
+    }
+    #search-form{
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 800px) {
+    #menuDrawer{
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }
+    #search-form{
+        flex: 1;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+    #search-form{
+        flex: 1;
+    }
+}
