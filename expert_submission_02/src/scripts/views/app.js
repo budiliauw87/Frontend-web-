@@ -1,3 +1,5 @@
+import '../globals/appbar/appbar';
+
 class App {
     constructor({ button, drawer, content }) {
         this._button = button;
@@ -6,7 +8,6 @@ class App {
 
         this.initApp();
     }
-
 
     initApp() {
 
