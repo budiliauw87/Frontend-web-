@@ -16,7 +16,7 @@ class AppBar extends HTMLElement {
     <div class="brand">
       <h1>My Catalouge</h1>
     </div>
-    <nav class="navigation ">
+    <nav class="navigation">
       <ul>
         <li class="active"><a href="/">Home</a></li>
         <li><a href="#">Favorite</a></li>

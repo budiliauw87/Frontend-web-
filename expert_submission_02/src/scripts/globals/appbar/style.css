@@ -14,14 +14,19 @@ app-bar {
 app-bar .navigation {
     position: absolute;
     top: 50px;
-    left: -180px;
-    width: 150px;
+    left: -200px;
+    width: 200px;
     transition: all 0.3s;
     padding: 8px;
     background-color: white;
     overflow: hidden;
 }
 
+app-bar h1 {
+    line-height: 44px;
+    margin-left: 0.5em;
+    font-size: 1.7em;
+}
 
 .nav-toggler {
     border: none;
@@ -30,7 +35,7 @@ app-bar .navigation {
     height: 44px;
     width: 45px;
     margin-left: 1em;
-    display: none;
+    display: block;
 }
 
 .nav-toggler .toggle-line {
@@ -46,9 +51,7 @@ app-bar .navigation {
 }
 
 .brand {
-    padding: 8px 0;
     text-transform: uppercase;
-    min-width: 44px;
     display: flex;
     align-items: center;
 }
@@ -75,20 +78,29 @@ app-bar .navigation {
     background: #eee;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .navigation.open {
+        margin-top: 8px;
+        left: 0;
+        display: block;
+        height: 100vh;
+    }
+
+    .navigation.open ul li a {
+        display: inline-block;
+        width: 100%;
+        margin-left: 24px;
+    }
 
     app-bar .navigation {
         display: none;
     }
 
-    app-bar h1 {
-        margin-left: 0.5em;
-        font-size: 1.7em;
-    }
 }
 
 /* For Tablet phones: */
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
+
     app-bar {
         grid-template-columns: 1fr auto;
         padding: 8px 32px;
@@ -98,6 +110,10 @@ app-bar .navigation {
         position: static;
         width: 100%;
         left: 0;
+    }
+
+    .nav-toggler {
+        display: none;
     }
 
     .navigation ul li {
@@ -130,6 +146,10 @@ app-bar .navigation {
         left: 0;
     }
 
+    .nav-toggler {
+        display: none;
+    }
+
     .navigation ul li {
         display: inline-block;
     }
@@ -152,6 +172,10 @@ app-bar .navigation {
         position: static;
         width: 100%;
         left: 0;
+    }
+
+    .nav-toggler {
+        display: none;
     }
 
     .navigation ul li {
