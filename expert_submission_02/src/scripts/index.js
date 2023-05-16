@@ -4,6 +4,12 @@ import App from '../scripts/views/app';
 const app = new App({
     button: document.querySelector('.nav-toggler'),
     drawer: document.querySelector('.navigation'),
-    content: document.querySelector('body'),
+    content: document.querySelector('main'),
+});
+window.addEventListener('hashchange', () => {
+    app.renderPage();
 });
 
+window.addEventListener('load', async () => {
+    app.renderPage();
+});
