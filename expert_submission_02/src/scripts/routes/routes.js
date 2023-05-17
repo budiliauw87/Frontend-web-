@@ -1,4 +1,4 @@
-import Home from '../views/pages/home';
+import Home from '../views/pages/home/home';
 import Favorite from '../views/pages/favorite';
 const routes = {
   '/': Home, // default page

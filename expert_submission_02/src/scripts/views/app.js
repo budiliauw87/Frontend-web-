@@ -1,4 +1,4 @@
-import '../globals/appbar/appbar';
+import '../component/appbar/app-bar';
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
