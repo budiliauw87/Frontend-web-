@@ -6,7 +6,7 @@ const Home = {
         <div class="jumbotron">
           <img src="./images/heros/hero-image.jpg" alt="This jumbotron image">
         </div>
-        <h2 class="subheading">Explore Restaurant</h2>
+        <h2 class="subheading"><span class="line-center">Explore Restaurant</span></h2>
         <div class="wrapper-catalog"></div>`;
   },
 

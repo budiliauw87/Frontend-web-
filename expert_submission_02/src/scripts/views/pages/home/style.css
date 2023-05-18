@@ -56,11 +56,13 @@
 
 .catalog-item h2 {
     min-height: 44px;
-    margin: 0 1rem;
+    margin: 1rem 1rem 0 1rem;
 }
 
 .rating {
-    padding: 0 1rem 1rem;
+    font-weight: 600;
+    color: #f13030;
+    margin: 0 1rem 1rem;
 }
 
 .catalog-body {
@@ -77,8 +79,29 @@
 }
 
 .subheading {
-    margin: 2rem 0;
+    width: 90%;
+    margin: auto;
     text-align: center !important;
+    position: relative;
+    z-index: 2;
+}
+
+.subheading .line-center {
+    margin: 0;
+    padding: 1.5rem 1em;
+    background: #e7ecef;
+    display: inline-block;
+    min-height: 44px;
+}
+
+.subheading ::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: solid 1.7px #b8b8b8;
+    z-index: -1;
 }
 
 /* For Tablet phones: */
@@ -86,6 +109,10 @@
 
     .jumbotron img {
         max-height: 300px;
+    }
+
+    .subheading {
+        width: 80%;
     }
 
     .wrapper-catalog {
@@ -104,6 +131,10 @@
     .jumbotron img {
         border-radius: 1rem;
         max-height: 300px;
+    }
+
+    .subheading {
+        width: 70%;
     }
 
     .wrapper-catalog {
