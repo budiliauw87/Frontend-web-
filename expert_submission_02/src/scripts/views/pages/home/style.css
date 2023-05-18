@@ -35,9 +35,11 @@
 
 .catalog-item .thumbnail {
     width: 100%;
+    min-height: 180px;
     height: 180px;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+    display: block;
 }
 
 .city {
