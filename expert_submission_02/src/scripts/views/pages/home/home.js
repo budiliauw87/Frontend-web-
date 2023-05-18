@@ -7,7 +7,14 @@ const Home = {
           <img src="./images/heros/hero-image.jpg" alt="This jumbotron image">
         </div>
         <h2 class="subheading"><span class="line-center">Explore Restaurant</span></h2>
-        <div class="wrapper-catalog"></div>`;
+        <div class="wrapper-catalog">
+          <div class='placeholder-catalog'></div>
+          <div class='placeholder-catalog'></div>
+          <div class='placeholder-catalog'></div>
+          <div class='placeholder-catalog'></div>
+          <div class='placeholder-catalog'></div>
+          <div class='placeholder-catalog'></div>
+        </div>`;
   },
 
   async afterRender() {
