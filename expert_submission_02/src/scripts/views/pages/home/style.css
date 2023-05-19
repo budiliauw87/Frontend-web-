@@ -1,6 +1,5 @@
 .jumbotron {
-    width: 100%;
-
+    width: 100vw;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -87,6 +86,17 @@
     position: relative;
     z-index: 2;
 }
+.error-msg{
+    display: none;
+    min-height: 40vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.error-msg .title-error{
+    font-size: 1.3rem;
+}
 
 .subheading .line-center {
     margin: 0;
@@ -114,6 +124,7 @@
     background-color: rgb(211, 210, 210);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     animation: shimmer 1.8s infinite;
+    mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
     -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
 }
 

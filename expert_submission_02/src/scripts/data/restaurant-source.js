@@ -1,4 +1,4 @@
-import API_ENDPOINT from '../constant/constant-app';
+import API_ENDPOINT from '../constant/endpoint-app';
 class RestaurantDataSource {
     static async getListRestaurants() {
         try {
@@ -7,7 +7,7 @@ class RestaurantDataSource {
             return responseJson;
         } catch (error) {
             return {
-                status: false,
+                error: false,
                 message: error.message,
             };
         }
@@ -18,7 +18,10 @@ class RestaurantDataSource {
             const responseJson = await response.json();
             return responseJson;
         } catch (error) {
-            return error;
+            return {
+                error: false,
+                message: error.message,
+            };
         }
     }
     static async searchRestaurant(keyword) {

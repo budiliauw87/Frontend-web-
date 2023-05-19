@@ -1,8 +1,10 @@
+import './style.css';
+
 const Favorite = {
   async render() {
     return `
       <div class="content">
-        <h2 class="content__heading">Favorite</h2>
+        <h2 class="subheading"><span class="line-center">Favorite</span></h2>
       </div>
     `;
   },

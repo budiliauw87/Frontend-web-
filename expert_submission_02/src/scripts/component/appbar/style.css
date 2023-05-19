@@ -1,5 +1,4 @@
 app-bar {
-
     padding: 8px 16px;
     grid-template-columns: auto 1fr auto;
     gap: 10px;
@@ -13,6 +12,7 @@ app-bar {
 }
 
 app-bar .navigation {
+    display: none;
     position: absolute;
     top: 50px;
     left: -200px;
@@ -21,6 +21,9 @@ app-bar .navigation {
     background-color: white;
     overflow: hidden;
 
+}
+.navigation li{
+    list-style: none;
 }
 
 app-bar h1 {
@@ -104,10 +107,6 @@ app-bar h1 {
         margin-top: 16px;
     }
 
-    app-bar .navigation {
-        display: none;
-
-    }
 
 }
 
@@ -120,6 +119,7 @@ app-bar h1 {
     }
 
     app-bar .navigation {
+        display: block;
         position: static;
         width: 100%;
         left: 0;
@@ -154,6 +154,7 @@ app-bar h1 {
     }
 
     app-bar .navigation {
+        display: block;
         position: static;
         width: 100%;
         left: 0;
@@ -182,6 +183,7 @@ app-bar h1 {
     }
 
     app-bar .navigation {
+        display: block;
         position: static;
         width: 100%;
         left: 0;

@@ -82,3 +82,19 @@ footer a {
   color: #424242;
   font-weight: 600;
 }
+
+button {
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d7d7d7;
+}
+
+button:active {
+  border: 8px;
+  background-color: #bbbbbb;
+}
