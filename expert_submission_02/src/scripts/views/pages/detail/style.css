@@ -107,7 +107,7 @@
     flex-shrink: 1;
     flex-basis: 0;
     flex-basis: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .footer-info h3 {
@@ -115,12 +115,53 @@
     margin-left: 1rem;
 }
 
+.reviews {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem 1rem;
+    border-bottom: 0.0625rem solid #d8d9db;
+}
 
+.profile-user {
+    margin: 0 16px;
+    align-items: center;
+    text-align: center;
+    font-family: arial, sans-serif;
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+}
+
+.profile-user .avatar {
+    display: block;
+    background-color: grey;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    height: 48px;
+    margin: 0 16px 8px;
+    width: 48px;
+}
+
+.reviews-user span {
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.reviews-user p {
+    margin: 8px 0;
+    line-height: 24px;
+    max-height: 72px;
+    font-size: 1rem;
+    font-style: italic;
+
+}
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 95%;
 }
 
 td, th {

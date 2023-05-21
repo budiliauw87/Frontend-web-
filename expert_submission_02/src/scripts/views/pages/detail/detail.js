@@ -55,6 +55,39 @@ const Detail = {
               </div>
               <div class='footer-info'>
                 <h3>Customer Reviews</h3>
+                <div class='reviews'>
+                  <div class='profile-user'>
+                    <div class='avatar'>N</div>
+                    <span>Name user</span>
+                  </div>
+                  <div class='reviews-user'>
+                    <span>Date review : <strong>20 Mei 2023</strong></span>
+                    <p>Tempatnya bagus namun menurut saya masih sedikit mahal.</p>
+                  </div>
+                </div>
+
+                <div class='reviews'>
+                  <div class='profile-user'>
+                    <div class='avatar'>N</div>
+                    <span>Name user</span>
+                  </div>
+                  <div class='reviews-user'>
+                    <span>Date review : <strong>20 Mei 2023</strong></span>
+                    <p>Tempatnya bagus namun menurut saya masih sedikit mahal.</p>
+                  </div>
+                </div>
+
+                <div class='reviews'>
+                  <div class='profile-user'>
+                    <div class='avatar'>N</div>
+                    <span>Name user</span>
+                  </div>
+                  <div class='reviews-user'>
+                    <span>Date review : <strong>20 Mei 2023</strong></span>
+                    <p>Tempatnya bagus namun menurut saya masih sedikit mahal.</p>
+                  </div>
+                </div>
+
               </div>
 
             </div>
