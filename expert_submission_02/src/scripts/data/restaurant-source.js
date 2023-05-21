@@ -12,9 +12,10 @@ class RestaurantDataSource {
             };
         }
     }
-    static async getDetailRestaurant(restaurantId) {
+    static async getDetailRestaurant(restaurantId = '') {
         try {
-            const response = await fetch(API_ENDPOINT.DETAIL + restaurantId);
+
+            const response = await fetch(API_ENDPOINT.DETAIL(restaurantId));
             const responseJson = await response.json();
             return responseJson;
         } catch (error) {

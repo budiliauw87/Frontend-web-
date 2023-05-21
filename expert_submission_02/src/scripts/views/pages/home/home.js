@@ -3,7 +3,6 @@ import CONFIG from '../../../constant/config';
 import RestaurantDataSource from '../../../data/restaurant-source';
 import placeholderItem from '../../templates/placeholder-catalog';
 const Home = {
-  
   async render() {
     return `
         <div class="jumbotron">
@@ -16,7 +15,7 @@ const Home = {
           <button type='button' id='btnreload'>Reload</button>
         </div>
         `;
-       
+
   },
 
   async afterRender() {
@@ -31,7 +30,7 @@ const Home = {
     this.getDataRestaurants();
   },
 
-  async getDataRestaurants(){
+  async getDataRestaurants() {
     const data = await RestaurantDataSource.getListRestaurants();
     const wrapperCatalog = document.querySelector('.wrapper-catalog');
     const errorElement = document.querySelector('.error-msg');

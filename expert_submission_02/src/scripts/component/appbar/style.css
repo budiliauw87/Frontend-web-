@@ -7,7 +7,6 @@ app-bar {
     display: grid;
     background: #fff;
     z-index: 99;
-    margin-bottom: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -22,7 +21,8 @@ app-bar .navigation {
     overflow: hidden;
 
 }
-.navigation li{
+
+.navigation li {
     list-style: none;
 }
 
