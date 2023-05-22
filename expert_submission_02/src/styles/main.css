@@ -98,3 +98,107 @@ button:active {
   border: 8px;
   background-color: #bbbbbb;
 }
+
+/* Placeholder */
+
+.placeholder-img {
+  width: 100vw;
+  min-height: 300px;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+}
+
+.placeholder-catalog {
+  min-height: 300px;
+  position: relative;
+  border-radius: 1em;
+  background-color: rgb(211, 210, 210);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.placeholder-title {
+  width: 300px;
+  margin: auto;
+  height: 30px;
+  border-radius: 0.5em;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+}
+
+.placeholder-second {
+  width: 300px;
+  border-radius: 0.5em;
+  margin: 0 1rem 1rem;
+  height: 24px;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+}
+
+.placeholder-info {
+  width: 350px;
+  border-radius: 0.3em;
+  margin: 1rem auto;
+  height: 24px;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+}
+
+.placeholder-category {
+  width: 100px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+  margin-right: 8px;
+}
+
+.placeholder-descreption {
+  height: 10px;
+  border-radius: 0.3em;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+  margin-bottom: 8px;
+}
+
+.placeholder-descreption.full {
+  width: 100% !important;
+}
+
+.placeholder-descreption.quarter {
+  width: 75% !important;
+}
+
+.placeholder-descreption.half {
+  width: 50% !important;
+}
+
+.placeholder-300 {
+  width: 80%;
+  height: 300px;
+  border-radius: 8px;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+  margin: 1rem;
+}
+
+.placeholder-80 {
+  width: 80%;
+  height: 90px;
+  border-radius: 8px;
+  position: relative;
+  background-color: rgb(211, 210, 210);
+  margin: 1rem;
+}
+
+.shimmer {
+  display: block;
+  animation: shimmer 1.8s infinite;
+  mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
+  -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
+}
+
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left
+  }
+}

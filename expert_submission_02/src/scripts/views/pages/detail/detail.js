@@ -6,88 +6,37 @@ const Detail = {
   async render() {
     return `
       <div class="restaurant-banner">
-        <img src="./images/heros/hero-image.jpg" alt="">
+        <div class='placeholder-img shimmer'></div>
       </div>
       <div class='content-detail'>
         <div class='restaurant-card'>
           <div class='card-title'>
-            <h2>Title restaurant</h2>
+            <div class='placeholder-title shimmer'></div>
           </div>
           <div class='card-body'>
-            <div class='restaurant-info'>
-              <div class='rating-info'>
-                  <i class='fa fa-star'></i>
-                  <i class='fa fa-star'></i>
-                  <i class='fa fa-star'></i>
-                  <span>3.5</span>
-              </div>
-              <div>
-                <i class='fa fa-comment'></i>
-                <span>15&nbsp;Reviews</span>
-              </div>
-              <div><i class='fa fa-map'></i><span>Gorontalo</span> </div>
-            </div>
+            <div class='placeholder-info shimmer'></div>
             <div class='category-info'>
-              <ul>
-                <li>Sop</li>
-                <li>Moderen</li>
-                <li>Best price</li>
-              </ul>
+              <div class='placeholder-category shimmer'></div>
+              <div class='placeholder-category shimmer'></div>
+              <div class='placeholder-category shimmer'></div>
             </div>
             <div class='descreption-info'>
-            <p>Quisque rutrum. Aenean imperdiet. Etia</p>
+              <div class='placeholder-descreption full shimmer'></div>
+              <div class='placeholder-descreption quarter shimmer'></div>
+              <div class='placeholder-descreption half shimmer'></div>
             </div>
             <div class='card-footer'>
               <div class='footer-info'>
-                <h3>Menu restaurant</h3>
-                <table>
-                  <tr>
-                    <th>Foods</th>
-                    <th>Drinks</th>
-                  </tr>
-                  <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                  </tr>
-                </table>
+                <div class='placeholder-second shimmer'></div>
+                <div class='placeholder-300 shimmer'></div>
+               
               </div>
               <div class='footer-info'>
-                <h3>Customer Reviews</h3>
-                <div class='reviews'>
-                  <div class='profile-user'>
-                    <div class='avatar'>N</div>
-                    <span>Name user</span>
-                  </div>
-                  <div class='reviews-user'>
-                    <span>Date review : <strong>20 Mei 2023</strong></span>
-                    <p>Tempatnya bagus namun .</p>
-                  </div>
-                </div>
-
-                <div class='reviews'>
-                  <div class='profile-user'>
-                    <div class='avatar'>N</div>
-                    <span>Name user</span>
-                  </div>
-                  <div class='reviews-user'>
-                    <span>Date review : <strong>20 Mei 2023</strong></span>
-                    <p>Tempatnya bagus namun.</p>
-                  </div>
-                </div>
-
-                <div class='reviews'>
-                  <div class='profile-user'>
-                    <div class='avatar'>N</div>
-                    <span>Name user</span>
-                  </div>
-                  <div class='reviews-user'>
-                    <span>Date review : <strong>20 Mei 2023</strong></span>
-                    <p>Tempatnya bagus namun.</p>
-                  </div>
-                </div>
-
+                <div class='placeholder-second shimmer'></div>
+                <div class='placeholder-80 shimmer'></div>
+                <div class='placeholder-80 shimmer'></div>
+                <div class='placeholder-80 shimmer'></div>
               </div>
-
             </div>
             
           </div>
