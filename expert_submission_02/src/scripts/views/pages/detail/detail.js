@@ -1,7 +1,7 @@
 import './style.css';
 
-import UrlParser from "../../../routes/url-parser";
-import RestaurantDataSource from "../../../data/restaurant-source";
+import UrlParser from '../../../routes/url-parser';
+import RestaurantDataSource from '../../../data/restaurant-source';
 const Detail = {
   async render() {
     return `
@@ -21,7 +21,10 @@ const Detail = {
                   <i class='fa fa-star'></i>
                   <span>3.5</span>
               </div>
-              <div><i class='fa fa-comment'></i><span>15&nbsp;Reviews</span> </div>
+              <div>
+                <i class='fa fa-comment'></i>
+                <span>15&nbsp;Reviews</span>
+              </div>
               <div><i class='fa fa-map'></i><span>Gorontalo</span> </div>
             </div>
             <div class='category-info'>
@@ -32,12 +35,7 @@ const Detail = {
               </ul>
             </div>
             <div class='descreption-info'>
-            <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-            Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit 
-            amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas 
-            nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-             amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. 
-             Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+            <p>Quisque rutrum. Aenean imperdiet. Etia</p>
             </div>
             <div class='card-footer'>
               <div class='footer-info'>
@@ -62,7 +60,7 @@ const Detail = {
                   </div>
                   <div class='reviews-user'>
                     <span>Date review : <strong>20 Mei 2023</strong></span>
-                    <p>Tempatnya bagus namun menurut saya masih sedikit mahal.</p>
+                    <p>Tempatnya bagus namun .</p>
                   </div>
                 </div>
 
@@ -73,7 +71,7 @@ const Detail = {
                   </div>
                   <div class='reviews-user'>
                     <span>Date review : <strong>20 Mei 2023</strong></span>
-                    <p>Tempatnya bagus namun menurut saya masih sedikit mahal.</p>
+                    <p>Tempatnya bagus namun.</p>
                   </div>
                 </div>
 
@@ -84,7 +82,7 @@ const Detail = {
                   </div>
                   <div class='reviews-user'>
                     <span>Date review : <strong>20 Mei 2023</strong></span>
-                    <p>Tempatnya bagus namun menurut saya masih sedikit mahal.</p>
+                    <p>Tempatnya bagus namun.</p>
                   </div>
                 </div>
 
@@ -102,12 +100,6 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const dataDetail = await RestaurantDataSource.getDetailRestaurant(url.id);
     console.log(dataDetail);
-    if (!dataDetail.error) {
-
-    } else {
-
-    }
-
   },
 };
 
