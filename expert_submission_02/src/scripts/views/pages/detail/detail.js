@@ -11,6 +11,10 @@ const Detail = {
       </div>
       <div class='content-detail'>
         <div class='restaurant-card'>${placeholderDetailRestaurant}</div>
+      </div>
+      <div class='error-msg'>
+        <h3 class='title-error'>Opss Something wrong !!</h3>
+        <button type='button' id='btnreload'>Reload</button>
       </div>`;
   },
 
@@ -22,13 +26,13 @@ const Detail = {
       wrapperCatalog.innerHTML = placeholderItem;
       this.getDetailRestaurant();
     });
-    console.log(dataDetail);
     const skipElelement = document.querySelector('.skip-link');
     skipElelement.scrollIntoView(true);
   },
   async getDetailRestaurant() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const dataDetail = await RestaurantDataSource.getDetailRestaurant(url.id);
+    console.log(dataDetail);
     if (!dataDetail.error) {
 
     }
