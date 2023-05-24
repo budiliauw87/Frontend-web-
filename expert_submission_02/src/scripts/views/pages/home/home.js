@@ -1,7 +1,9 @@
 import './style.css';
 import CONFIG from '../../../constant/config';
 import RestaurantDataSource from '../../../data/restaurant-source';
-import placeholderItem from '../../templates/placeholder-catalog';
+import {
+  placeholderItem,
+} from '../../templates/placeholder-catalog';
 const Home = {
   async render() {
     return `
