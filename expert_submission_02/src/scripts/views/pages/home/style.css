@@ -87,19 +87,6 @@
     z-index: 2;
 }
 
-.error-msg {
-    display: none;
-    min-height: 40vh;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.error-msg .title-error {
-    font-size: 1.3rem;
-}
-
 .subheading .line-center {
     margin: 0;
     padding: 1.5rem 1em;
