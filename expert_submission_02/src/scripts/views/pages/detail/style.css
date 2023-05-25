@@ -81,6 +81,7 @@
     list-style: none;
 }
 
+
 .category-info li {
     border: 0.0625rem solid #d8d9db;
     border-radius: 1rem;
@@ -92,6 +93,7 @@
 .descreption-info {
     margin: 2rem 1rem;
     line-height: 24px;
+    font-size: 0.875rem;
 }
 
 .card-footer {
@@ -99,6 +101,18 @@
     border-top: 0.0625rem solid #d8d9db;
     padding: 1.5rem 0;
     flex-direction: column;
+}
+.card-footer ul {
+    margin-left: 1rem;
+    border-left: 0.625rem solid #d8d9db;;
+    list-style: none;
+}
+.card-footer ul li{
+    font-size: 0.850rem;
+    border-bottom: 0.0625rem solid #d8d9db;
+    padding: 0.5rem 1.2rem 0.5rem 0;
+    text-transform: capitalize;
+    margin: 0 1rem;
 }
 
 .footer-info {
@@ -113,11 +127,18 @@
     font-size: 1.3rem;
     margin-left: 1rem;
 }
-
+.reviews-info {
+    margin-left: 1rem;
+    border-left: 0.625rem solid #d8d9db;;
+    list-style: none;
+}
 .reviews {
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: row;
-    margin: 0 1rem 1rem;
+    margin: 0.75rem 0;
+}
+.reviews:not(:last-child) {
     border-bottom: 0.0625rem solid #d8d9db;
 }
 
@@ -138,7 +159,7 @@
     padding: 1rem;
     border-radius: 50%;
     height: 48px;
-    margin: 0 16px 8px;
+    margin: 0 0 8px;
     width: 48px;
 }
 
