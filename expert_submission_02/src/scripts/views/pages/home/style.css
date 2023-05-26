@@ -86,11 +86,12 @@
     text-align: center !important;
     position: relative;
     z-index: 2;
+    font-size: 1.5rem;
 }
 
 .subheading .line-center {
     margin: 0;
-    padding: 1.5rem 1em;
+    padding: 2rem 1rem;
     background: #e7ecef;
     display: inline-block;
     min-height: 44px;

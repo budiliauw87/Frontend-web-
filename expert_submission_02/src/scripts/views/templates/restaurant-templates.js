@@ -3,11 +3,13 @@ const restaurantElement = (restaurant)=>{
   return `<div class="restaurant-banner">
     <img src='${CONFIG.IMAGE_LARGE_URL + restaurant.pictureId}' 
     alt='${restaurant.name}'/>
+   
   </div>
   <div class='content-detail'>
     <div class='restaurant-card'>
       <div class='card-title'>
         <h2>${restaurant.name}</h2>
+        <button class='btn-favorite'>set to Favorite</button>
       </div>
       <div class='card-body'>
         <div class='restaurant-info'>
@@ -29,12 +31,21 @@ const restaurantElement = (restaurant)=>{
         <div class='descreption-info'>
         <p>${restaurant.description}</p>
         </div>
-        <div class='card-footer'>
-          <div class='footer-info'>
+        <h2 class="subheading">
+          <span class="line-center bg-white">Menu Restaurant</span>
+        </h2>
+        <div class='menu-info'>
+          <div class='menu-list'>
             <h3>Menu restaurant</h3>
             ${tableMenus(restaurant.menus.foods)}
+          </div>
+            <div class='menu-list'>
+            <h3>Menu restaurant</h3>
             ${tableMenus(restaurant.menus.drinks)}
           </div>
+        </div>
+        
+        <div class='card-footer'>
           <div class='footer-info'>
             <h3>Customer Reviews</h3>
             ${customerReviews(restaurant.customerReviews)}

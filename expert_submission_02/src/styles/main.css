@@ -214,3 +214,7 @@ button:active {
     -webkit-mask-position: left
   }
 }
+
+.bg-white{
+  background: #fff !important;;
+}
