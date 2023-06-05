@@ -1,14 +1,14 @@
 import './style.css';
 
 class AppBar extends HTMLElement {
-
   connectedCallback() {
     this.render();
   }
 
   render() {
     this.innerHTML = `
-    <button href="#" class="nav-toggler" tabindex="2" aria-label="toggle drawer">
+    <button href="#" class="nav-toggler" 
+    tabindex="2" aria-label="toggle drawer">
       <div class="toggle-line"></div>
       <div class="toggle-line"></div>
       <div class="toggle-line"></div>
@@ -24,7 +24,6 @@ class AppBar extends HTMLElement {
       </ul>
     </nav>`;
   }
-
 }
 
 customElements.define('app-bar', AppBar);

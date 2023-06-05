@@ -17,5 +17,7 @@ module.exports = {
     'no-restricted-globals': 0,
     'linebreak-style': 0,
     'space-unary-ops': 0,
+    'require-jsdoc': 0,
+    'new-cap': 0,
   },
 };
