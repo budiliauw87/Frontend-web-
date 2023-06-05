@@ -9,7 +9,7 @@ const restaurantElement = (restaurant)=>{
     <div class='restaurant-card'>
       <div class='card-title'>
         <h2>${restaurant.name}</h2>
-        <button class='btn-favorite'>set to Favorite</button>
+        <button id='btnfavorite' class='btn-favorite'>set to Favorite</button>
       </div>
       <div class='card-body'>
         <div class='restaurant-info'>
@@ -36,11 +36,11 @@ const restaurantElement = (restaurant)=>{
         </h2>
         <div class='menu-info'>
           <div class='menu-list'>
-            <h3>Menu restaurant</h3>
+            <h3>Food List</h3>
             ${tableMenus(restaurant.menus.foods)}
           </div>
             <div class='menu-list'>
-            <h3>Menu restaurant</h3>
+            <h3>Drink List</h3>
             ${tableMenus(restaurant.menus.drinks)}
           </div>
         </div>
@@ -70,9 +70,10 @@ const tableMenus = (menus)=>{
 const customerReviews = (reviews)=>{
   let reviewElement = `<div class='reviews-info'>`;
   reviews.forEach((review)=>{
+    const titleName = review.name.substring(0, 1);
     reviewElement+=`<div class='reviews'>
     <div class='profile-user'>
-      <div class='avatar'>${review.name.substring(0, 1)}</div>
+      <div class='avatar'>${titleName.toUpperCase()}</div>
       <span>${review.name}</span>
     </div>
     <div class='reviews-user'>
