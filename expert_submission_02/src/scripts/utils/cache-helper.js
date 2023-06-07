@@ -1,12 +1,11 @@
 import CONFIG from '../constant/config';
-const CACHE_NAME = CONFIG.APP_NAME+CONFIG.VERSION_APP;
 const CacheHelper = {
   async cachingApp(request) {
     const cache = await this._openCache();
     cache.addAll(request);
     console.log('adding cache');
   },
-  async revalidateCache() {
+  async revalidateCache(request) {
     console.log('revalidate cache');
     const response = await caches.match(request);
     if (response) {
@@ -18,7 +17,7 @@ const CacheHelper = {
   async deleteCache() {
     console.log('Delete cache');
     const cacheNames = await caches.keys();
-    cacheNames.filter((name)=> name !==CACHE_NAME)
+    cacheNames.filter((name)=> name !==CONFIG.CACHE_NAME)
         .map((filteredName)=>caches.delete(filteredName));
   },
   async _fetchRequest(request) {
@@ -34,7 +33,7 @@ const CacheHelper = {
     cache.add(request);
   },
   async _openCache() {
-    return caches.open(CACHE_NAME);
+    return caches.open(CONFIG.CACHE_NAME);
   },
 };
 
