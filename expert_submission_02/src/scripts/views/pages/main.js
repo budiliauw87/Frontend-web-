@@ -1,6 +1,4 @@
 import '../../component/appbar/app-bar';
 import '../../../styles/main.css';
-const main = () => {
-    
-};
+const main = () => {};
 export default main;

@@ -21,7 +21,7 @@ const FavoriteDatabase = {
     return (await dbPromise).put(CONFIG.OBJECT_STORE_NAME, restaurant);
   },
   async deleteRestaurant(id) {
-    return (await dbPromise).put(CONFIG.OBJECT_STORE_NAME, id);
+    return (await dbPromise).delete(CONFIG.OBJECT_STORE_NAME, id);
   },
 };
 
