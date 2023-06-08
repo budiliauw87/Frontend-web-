@@ -99,12 +99,11 @@
 }
 .card-footer {
     border-top: 0.0625rem solid #d8d9db;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 .menu-info{
     display: flex;
-    padding: 0 1rem ;
-    flex-direction: row;
+    flex-direction: column;
 }
 .menu-info ul {
     margin: 1rem 0.5rem;
@@ -196,6 +195,10 @@
         max-width: 800px;
     }
 
+    .menu-info{
+        flex-direction: row;
+    }
+
 }
 
 @media (min-width: 1025px) {
@@ -205,5 +208,8 @@
 
     .restaurant-card {
         max-width: 1000px;
+    }
+    .menu-info{
+        flex-direction: row;
     }
 }

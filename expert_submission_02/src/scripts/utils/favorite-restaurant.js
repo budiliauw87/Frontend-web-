@@ -12,7 +12,7 @@ const FavoriteDatabase = {
     return (await dbPromise).getAll(CONFIG.OBJECT_STORE_NAME);
   },
   async getRestaurant(id) {
-    return (await dbPromise).get(CONFIG.OBJECT_STORE_NAME);
+    return (await dbPromise).get(CONFIG.OBJECT_STORE_NAME, id);
   },
   async putRestaurant(restaurant) {
     return (await dbPromise).add(CONFIG.OBJECT_STORE_NAME, restaurant);

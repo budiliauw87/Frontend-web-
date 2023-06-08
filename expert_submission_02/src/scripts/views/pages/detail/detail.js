@@ -3,7 +3,8 @@ import './style.css';
 import UrlParser from '../../../routes/url-parser';
 import RestaurantDataSource from '../../../data/restaurant-source';
 import {placeholderDetailRestaurant} from '../../templates/placeholder-catalog';
-import restaurantElement from '../../templates/restaurant-templates';
+import {restaurantElement} from '../../templates/restaurant-templates';
+import FavoriteInitiator from '../../../utils/favorite-initiator';
 const Detail = {
   async render() {
     return `
@@ -36,6 +37,8 @@ const Detail = {
     const dataDetail = await RestaurantDataSource.getDetailRestaurant(url.id);
     if (!dataDetail.error) {
       contentElement.innerHTML = restaurantElement(dataDetail.restaurant);
+      const btnFavorite = document.querySelector('#btnfavorite');
+      FavoriteInitiator.init(btnFavorite, dataDetail.restaurant);
     } else {
       errorElement.style.display = 'flex';
     }

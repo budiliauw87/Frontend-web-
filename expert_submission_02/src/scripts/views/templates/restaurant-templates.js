@@ -3,15 +3,12 @@ const restaurantElement = (restaurant)=>{
   return `<div class="restaurant-banner">
     <img src='${CONFIG.IMAGE_LARGE_URL + restaurant.pictureId}' 
     alt='${restaurant.name}'/>
-   
   </div>
   <div class='content-detail'>
     <div class='restaurant-card'>
       <div class='card-title'>
         <h2>${restaurant.name}</h2>
-        <button id='btnfavorite' class='btn-favorite'>
-          <i class='fa fa-heart-o' aria-hidden='true'></i> set to Favorite
-        </button>
+        <button id='btnfavorite' class='btn-favorite'></button>
       </div>
       <div class='card-body'>
         <div class='restaurant-info'>
@@ -59,6 +56,10 @@ const restaurantElement = (restaurant)=>{
   </div>`;
 };
 
+const iconFavorite = (isFavorite)=>{
+  const icon = isFavorite ? 'fa fa-heart':'fa fa-heart-o';
+  return `Favorite <i class='${icon}' aria-hidden='true'></i> `;
+};
 
 const tableMenus = (menus)=>{
   let menuElement = '<ul>';
@@ -97,5 +98,4 @@ const categoryRestaurant = (categories)=>{
   return categoryTag;
 };
 
-
-export default restaurantElement;
+export {restaurantElement, iconFavorite};
