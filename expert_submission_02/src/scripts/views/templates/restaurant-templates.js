@@ -9,7 +9,9 @@ const restaurantElement = (restaurant)=>{
     <div class='restaurant-card'>
       <div class='card-title'>
         <h2>${restaurant.name}</h2>
-        <button id='btnfavorite' class='btn-favorite'>set to Favorite</button>
+        <button id='btnfavorite' class='btn-favorite'>
+          <i class='fa fa-heart-o' aria-hidden='true'></i> set to Favorite
+        </button>
       </div>
       <div class='card-body'>
         <div class='restaurant-info'>

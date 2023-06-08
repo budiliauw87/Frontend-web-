@@ -39,8 +39,8 @@ const Detail = {
     } else {
       errorElement.style.display = 'flex';
     }
-    const skipElelement = document.querySelector('.skip-link');
-    skipElelement.scrollIntoView(true);
+    const skipElement = document.querySelector('.skip-link');
+    skipElement.scrollIntoView(true);
   },
 };
 
