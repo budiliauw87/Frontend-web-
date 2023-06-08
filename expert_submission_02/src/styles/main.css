@@ -208,6 +208,10 @@ button:active {
 .error-msg .title-error {
   font-size: 1.3rem;
 }
+.error-msg button {
+  margin: 1rem auto;
+}
+
 
 @keyframes shimmer {
   100% {
