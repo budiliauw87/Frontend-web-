@@ -191,7 +191,7 @@ button:active {
 
 .shimmer {
   display: block;
-  animation: shimmer 1.8s infinite;
+  animation: shimmer 1.5s infinite;
   mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
   -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
 }

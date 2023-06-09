@@ -15,6 +15,7 @@
 
 /* Restaurant item*/
 .wrapper-catalog {
+    width: 100vw;
     padding: 0 1rem;
     display: grid;
     gap: 1rem;
@@ -141,7 +142,7 @@
 
     .wrapper-catalog {
         margin: 0 auto;
-        width: 1000px;
+        max-width: 1000px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
