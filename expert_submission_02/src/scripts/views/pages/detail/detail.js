@@ -35,6 +35,7 @@ const Detail = {
     const errorElement = document.querySelector('.error-msg');
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const dataDetail = await RestaurantDataSource.getDetailRestaurant(url.id);
+    console.log(dataDetail);
     if (!dataDetail.error) {
       contentElement.innerHTML = restaurantElement(dataDetail.restaurant);
       const btnFavorite = document.querySelector('#btnfavorite');

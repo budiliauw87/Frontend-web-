@@ -63,7 +63,6 @@ const Favorite = {
                 </div>
             </div>`;
         });
-        new Throw('error testing');
       }
     } catch (error) {
       isError = true;
@@ -76,14 +75,12 @@ const Favorite = {
         titleError.innerText = messageError;
         titleError.style.display = 'block';
         errorElement.style.display = 'flex';
-        const valueDisplay = isEmpty ? 'none':'block';
-        btnReload.style.display = valueDisplay;
+        btnReload.style.display = isEmpty ? 'none':'block';
       } else {
         titleError.style.display = 'none';
         btnReload.style.display = 'none';
         errorElement.style.display = 'block';
       }
-      console.log('error favorite '+isError);
       wrapperCatalog.innerHTML = favoriteItems;
     }
   },

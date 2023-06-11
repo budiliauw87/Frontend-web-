@@ -77,9 +77,12 @@ footer {
 }
 
 footer a {
+  display: inline-block;
   text-decoration: none;
   color: #424242;
   font-weight: 600;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 button {
@@ -211,7 +214,6 @@ button:active {
 .error-msg button {
   margin: 1rem auto;
 }
-
 
 @keyframes shimmer {
   100% {

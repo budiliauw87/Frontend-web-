@@ -2,6 +2,7 @@ import 'regenerator-runtime';
 import CacheHelper from './utils/cache-helper';
 const assetsToCache = [
   './',
+  './images/heros/hero-image.jpg',
   './images/icons/apple-touch-icon.png',
   './images/icons/restaurant_iconx48.png',
   './images/icons/restaurant_iconx71.png',

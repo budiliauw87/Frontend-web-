@@ -7,10 +7,16 @@ const restaurantElement = (restaurant)=>{
   <div class='content-detail'>
     <div class='restaurant-card'>
       <div class='card-title'>
-        <h2>${restaurant.name}</h2>
+        <div class="address-wrapper">
+          <h2>${restaurant.name}</h2>
+          <h3>${restaurant.address}</h3>
+        </div>
         <button id='btnfavorite' class='btn-favorite'></button>
       </div>
       <div class='card-body'>
+        <div class='category-info'>
+          ${categoryRestaurant(restaurant.categories)}
+        </div>
         <div class='restaurant-info'>
           <div class='rating-info'>
               <i class='fa fa-star'></i>
@@ -22,10 +28,8 @@ const restaurantElement = (restaurant)=>{
             <i class='fa fa-comment'></i>
             <span>${restaurant.customerReviews.length}&nbsp;Reviews</span>
           </div>
+         
           <div><i class='fa fa-map'></i><span>${restaurant.city}</span> </div>
-        </div>
-        <div class='category-info'>
-          ${categoryRestaurant(restaurant.categories)}
         </div>
         <div class='descreption-info'>
         <p>${restaurant.description}</p>
