@@ -1,0 +1,5 @@
+.content {
+    min-height: calc(90vh - 71px);
+    display: flex;
+    align-items: center;
+}
