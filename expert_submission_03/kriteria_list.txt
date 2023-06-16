@@ -1,10 +1,8 @@
 Submission: Katalog Restoran + PWA
 
 Fitur yang harus ada pada aplikasi: 
-- Menggunakan ESLint sebagai linter ketika menuliskan kode JavaScript (Using ESLint).
-- Membuat website dengan arsitektur Application Shell (Practice: Application Shell).
-- Menerapkan Web App Manifest (Practice: Web App Manifest).
-- Menerapkan Service Worker (Practice: Service Worker).
-- Menerapkan Cache API pada Service Worker (Practice: Cache API).
-- Menggunakan IndexedDB untuk menyimpan data dalam bentuk objek (Practice: IndexedDB).
-- Serta menerapkan WebSocket dan Notification (Practice: Web Socket & Notification).
+- Interration Test
+- End to End Test
+- Image Optimiization
+- Bundle Optimiization
+- Pertahankan syarat yang ada pada sebelumnya. 
