@@ -23,6 +23,9 @@ const FavoriteDatabase = {
   async deleteRestaurant(id) {
     return (await dbPromise).delete(CONFIG.OBJECT_STORE_NAME, id);
   },
+  async clearRestaurant() {
+    return (await dbPromise).clear(CONFIG.OBJECT_STORE_NAME);
+  },
 };
 
 export default FavoriteDatabase;
