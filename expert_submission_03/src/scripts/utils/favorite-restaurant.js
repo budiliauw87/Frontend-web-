@@ -12,9 +12,15 @@ const FavoriteDatabase = {
     return (await dbPromise).getAll(CONFIG.OBJECT_STORE_NAME);
   },
   async getRestaurant(id) {
+    if (!id) {
+      return;
+    }
     return (await dbPromise).get(CONFIG.OBJECT_STORE_NAME, id);
   },
   async putRestaurant(restaurant) {
+    if (!restaurant.hasOwnProperty('id')) {
+      return;
+    }
     return (await dbPromise).add(CONFIG.OBJECT_STORE_NAME, restaurant);
   },
   async updateRestaurant(restaurant) {

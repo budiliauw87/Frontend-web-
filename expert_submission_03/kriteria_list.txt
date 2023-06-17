@@ -1,8 +1,8 @@
 Submission: Katalog Restoran + PWA
 
 Fitur yang harus ada pada aplikasi: 
-- Interration Test
-- End to End Test
+- Interration Test - DONE
+- End to End Test 
 - Image Optimiization
 - Bundle Optimiization
 - Pertahankan syarat yang ada pada sebelumnya. 
