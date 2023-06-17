@@ -32,7 +32,8 @@ describe('Favorite Restaurant', () => {
     await TestButtonFactory.createFavoriteButtonPresenter(restaurant);
     document.querySelector('#btnfavorite').dispatchEvent(new Event('click'));
     const tempRestaurant = await FavoriteDatabase.getRestaurant(restaurant.id);
-    expect(tempRestaurant.id).toEqual(restaurant.id);
+    console.log(`tempRestaurant`, tempRestaurant);
+    expect(restaurant).toEqual(tempRestaurant);
     FavoriteDatabase.deleteRestaurant(restaurant.id);
   });
 });
