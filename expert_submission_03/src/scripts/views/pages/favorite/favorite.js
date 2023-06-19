@@ -2,17 +2,12 @@ import './style.css';
 import CONFIG from '../../../constant/config';
 import {placeholderItem} from '../../templates/placeholder-catalog';
 import FavoriteDatabase from '../../../utils/favorite-restaurant';
+import FavoriteView from './favorite-view';
+const view = new FavoriteView();
+
 const Favorite = {
   async render() {
-    return `
-    <div class='error-msg'>
-        <h2 class="subheading">
-          <span class="line-center">Favorite Restaurant</span>
-        </h2>
-        <div class='wrapper-catalog'>${placeholderItem}</div>
-        <h3 class='title-error'>Opss Something wrong !!</h3>
-        <button type='button' id='btnreload'>Reload</button>
-    </div>`;
+    view.getTemplate();
   },
 
   async afterRender() {
@@ -27,7 +22,7 @@ const Favorite = {
       wrapperCatalog.innerHTML = placeholderItem;
       setTimeout(()=>{
         this.getDataFavorites();
-      }, 2000);
+      }, 1000);
     });
     this.getDataFavorites();
   },
