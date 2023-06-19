@@ -25,6 +25,15 @@ class FavoriteView {
     const subheading = document.querySelector('.subheading');
     const btnReload = document.querySelector('#btnreload');
     const titleError = document.querySelector('.title-error');
+    btnReload.addEventListener('click', (event) => {
+      subheading.style.display = 'block';
+      titleError.style.display = 'none';
+      btnReload.style.display = 'none';
+      wrapperCatalog.innerHTML = placeholderItem;
+      setTimeout(() => {
+        this.showFavoriteRestaurants(restaurants);
+      }, 1000);
+    });
     let isError = false;
     let isEmpty = false;
     let messageError ='Something Error!!';
@@ -35,10 +44,11 @@ class FavoriteView {
         isError = true;
         isEmpty = true;
       } else {
-        html = movies.reduce((carry, restaurant) =>
+        html = restaurants.reduce((carry, restaurant) =>
           carry.concat(this.createFavoriteItemTemplate(restaurant)), '');
       }
     } catch (error) {
+      console.log(error);
       isError = true;
       messageError ='Something Error!!';
       errorElement.style.display = 'block';
@@ -61,13 +71,13 @@ class FavoriteView {
 
   createFavoriteItemTemplate(restaurant) {
     return `<div class='catalog-item'>
-        <img src='${CONFIG.IMAGE_URL + resto.pictureId}' 
-        class='thumbnail' alt='${resto.name}'>
-        <div class='city'>${resto.city}</div>
-        <a href='#/detail/${resto.id}'><h2>${resto.name}</h2></a>
-        <div class='rating'><p>Ratings ${resto.rating}</p></div>
+        <img src='${CONFIG.IMAGE_URL + restaurant.pictureId}' 
+        class='thumbnail' alt='${restaurant.name}'>
+        <div class='city'>${restaurant.city}</div>
+        <a href='#/detail/${restaurant.id}'><h2>${restaurant.name}</h2></a>
+        <div class='rating'><p>Ratings ${restaurant.rating}</p></div>
         <div class='catalog-body'>
-        <p>${resto.description}</p>
+        <p>${restaurant.description}</p>
         </div>
     </div>`;
   }
