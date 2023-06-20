@@ -224,3 +224,12 @@ button:active {
 .bg-white{
   background: #fff !important;;
 }
+
+/**
+* Favorite
+*/
+.content {
+  min-height: calc(90vh - 71px);
+  display: flex;
+  align-items: center;
+}

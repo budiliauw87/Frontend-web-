@@ -1,4 +1,3 @@
-import './style.css';
 import CONFIG from '../../../constant/config';
 import {placeholderItem} from '../../templates/placeholder-catalog';
 

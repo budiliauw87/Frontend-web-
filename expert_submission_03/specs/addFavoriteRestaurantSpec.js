@@ -1,6 +1,6 @@
 import * as TestButtonFactory from './utils/factoryButtonTest';
 import dataRestaurants from '../src/scripts/data/data.json';
-import FavoriteDatabase from '../src/scripts/utils/favorite-restaurant';
+import FavoriteDatabase from '../src/scripts/data/favorite-restaurant';
 
 describe('Favorite Restaurant', () => {
   const addFavoriteButtonContainer = () => {
