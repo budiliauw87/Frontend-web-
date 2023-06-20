@@ -1,5 +1,5 @@
 import './style.css';
-import FavoriteDatabase from '../../../utils/favorite-restaurant';
+import FavoriteDatabase from '../../../data/favorite-restaurant';
 import FavoritePresenter from './favorite-presenter';
 import FavoriteView from './favorite-view';
 

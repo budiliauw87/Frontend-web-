@@ -1,5 +1,5 @@
 import {iconFavorite} from '../views/templates/restaurant-templates';
-import FavoriteDatabase from './favorite-restaurant';
+import FavoriteDatabase from '../data/favorite-restaurant';
 
 const FavoriteInitiator = {
   async init(favoriteButton, restaurant) {
