@@ -65,6 +65,7 @@ class FavoriteView {
         errorElement.style.display = 'block';
       }
       wrapperCatalog.innerHTML = html;
+      wrapperCatalog.dispatchEvent(new Event('restaurant:updated'));
     }
   }
 
