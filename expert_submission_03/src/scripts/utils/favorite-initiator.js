@@ -23,7 +23,6 @@ const FavoriteInitiator = {
 
   async _checkIsExist(id) {
     const tempRestaurant = await FavoriteDatabase.getRestaurant(id);
-    console.log(tempRestaurant);
     return !!tempRestaurant;
   },
 };
