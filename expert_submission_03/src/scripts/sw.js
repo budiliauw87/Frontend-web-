@@ -21,11 +21,9 @@ const assetsToCache = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(CacheHelper.cachingApp([...assetsToCache]));
-  console.log('Service worker installed');
 });
 self.addEventListener('activate', (event) => {
   event.waitUntil(CacheHelper.deleteCache());
-  console.log('Service worker activated');
 });
 self.addEventListener('fetch', (event) => {
   event.respondWith(CacheHelper.revalidateCache(event.request));

@@ -1,3 +1,5 @@
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import './style.css';
 import CONFIG from '../../../constant/config';
 import RestaurantDataSource from '../../../data/restaurant-source';
@@ -14,7 +16,8 @@ const Home = {
             <img 
             srcset="./images/heros/hero-small.jpg 480w, 
             ./images/heros/hero-medium.jpg 800w"
-            src="./images/heros/hero-large.jpg" alt="This jumbotron image">
+            src="./images/heros/hero-large.jpg" alt="This jumbotron image" 
+            width="1000" height="300" >
           </picture>
         </div>
         <h2 class="subheading">
@@ -49,7 +52,7 @@ const Home = {
         restaurantElement += `
           <div class='catalog-item'>
               <img src='${CONFIG.IMAGE_URL + resto.pictureId}' 
-              class='thumbnail' alt='${resto.name}'>
+              class='thumbnail lazyload' alt='${resto.name}'>
               <div class='city'>${resto.city}</div>
               <a href='#/detail/${resto.id}'><h2>${resto.name}</h2></a>
               <div class='rating'><p>Ratings ${resto.rating}</p></div>

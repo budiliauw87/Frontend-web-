@@ -1,9 +1,9 @@
 import CONFIG from '../constant/config';
 const CacheHelper = {
   async cachingApp(request) {
-    const cache = await this._openCache();
-    cache.addAll(request);
-    console.log('adding cache');
+    const cache = await this._openCache().then((value)=> {
+      cache.addAll(request);
+    }).catch();
   },
   async revalidateCache(request) {
     console.log('revalidate cache');
@@ -15,7 +15,6 @@ const CacheHelper = {
     return this._fetchRequest(request);
   },
   async deleteCache() {
-    console.log('Delete cache');
     const cacheNames = await caches.keys();
     cacheNames.filter((name)=> name !==CONFIG.CACHE_NAME)
         .map((filteredName)=>caches.delete(filteredName));
