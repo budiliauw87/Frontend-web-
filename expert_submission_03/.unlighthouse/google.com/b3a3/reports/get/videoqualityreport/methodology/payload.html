@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/main.css" rel="stylesheet" nonce="9N9hwtxfx9atEtEhfKC_VQ">
+    <title></title>
+    <style type="text/css">
+    body.c1 {overflow: auto}
+    </style>
+  </head>
+  <body class="c1">
+    <div class="full_page_text">
+      <div class="details_holder">
+        <div class="details_content">
+          <div class="header_title">
+            The Methodology
+          </div>
+          <div class="header_subtitle">
+            How we verify that an Internet Provider can consistently serve YouTube in HD.
+          </div>
+          <div class="header_hero_image">
+            <div class="methodology_head"></div>
+          </div>
+          <div class="section_text_content_title stct">
+            The Ratings
+          </div>
+          <div class="dd">
+            <div class="detail_image">
+              <div class="methodology_b0"></div>
+            </div>
+            <div class="topbox1">
+              <div class="detail_item_title">
+                What do the ratings mean?
+              </div>
+              <div class="detail_item_body fs18">
+                The ratings represent the video streaming quality you can expect (at least 90% of
+                the time) when you watch YouTube on an Internet Service Provider in a specific
+                area.
+              </div>
+            </div>
+            <div class="topbox2">
+              <div class="detail_item_body">
+                <ul>
+                  <li>
+                    <strong>YouTube HD Verified:</strong> Users on YouTube HD Verified networks
+                    should expect smooth playback most of the time when watching high-definition
+                    YouTube videos (720p and above).
+                  </li>
+                  <li>
+                    <strong>Standard Definition:</strong> Users on networks rated as Standard
+                    Definition should expect smooth playback on standard-definition YouTube videos
+                    (360p) and may experience occasional interruptions on high-definition YouTube
+                    videos (720p and above).
+                  </li>
+                  <li>
+                    <strong>Lower Definition:</strong> Users on networks rated as Lower Definition
+                    may experience fuzzy picture quality and frequent interruptions while playing
+                    YouTube videos at 360p and above.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dd">
+            <div class="detail_image">
+              <div class="methodology_b1"></div>
+            </div>
+            <div class="topbox1">
+              <div class="detail_item_title">
+                Why is the data useful?
+              </div>
+              <div class="detail_item_body fs18">
+                Rather than being based on data from a small sample of users, this report is based
+                on billions of YouTube videos watched across thousands of ISPs.
+              </div>
+            </div>
+            <div class="topbox2">
+              <div class="detail_item_body">
+                <ul>
+                  <li>We look at how quickly all YouTube video data was loaded over the last 30
+                  days.
+                  </li>
+                  <li>We segment the results by ISP and by geographical location.
+                  </li>
+                  <li>We determine what the minimum available speed was at least 90% of the time.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dd">
+            <div class="detail_image">
+              <div class="methodology_b2"></div>
+            </div>
+            <div class="topbox1">
+              <div class="detail_item_title">
+                How do you protect my privacy?
+              </div>
+              <div class="detail_item_body fs18">
+                This is anonymized data about everyone watching YouTube on an ISP.
+              </div>
+            </div>
+            <div class="topbox2">
+              <div class="detail_item_body">
+                <ul>
+                  <li>Ratings are centered around networks, not users.
+                  </li>
+                  <li>All samples are completely anonymized and no user information is stored or
+                  used.
+                  </li>
+                  <li>We will only show the results for a geographic area big enough to have a lot
+                  of users.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr class="methodology_hr">
+          <div class="dd methodology_bottom" id="detail_bottom">
+            <div class="dd">
+              <div class="section_text_content_title">
+                Abstract
+              </div>
+              <div class="detail_item_body">
+                <p>
+                  There are many factors that can independently affect user experience on the
+                  internet, including - but not limited to - a user's internet connection speed,
+                  reliability of the access network, availability and load characteristics of the
+                  application servers and in some cases, the configuration of the users' in-home
+                  network. Individual and isolated measures like access speed or server capacity do
+                  not capture the real user experience. An end to end, application-level
+                  performance measurement that includes all the influencers in the equation is the
+                  right approach to measure and quantify the true internet user experience.
+                </p>
+                <p>
+                  Presented here is a methodology to rate Internet Service Providers (ISPs) in
+                  terms of YouTube video capability, based on sustained application level
+                  performance measurements. The objective is to present a rating that is
+                  meaningful, easy to understand and one that closely reflects the real world
+                  internet experience.
+                </p>
+              </div>
+            </div>
+            <div class="dd nbm">
+              <div class="section_text_content_title">
+                Methodology
+              </div>
+              <div class="detail_item_title_smaller">
+                Measurements
+              </div>
+              <div class="detail_item_body">
+                <p>
+                  A typical YouTube video playback consists of a YouTube client (player) fetching
+                  video bytes in a streaming fashion from a YouTube server (CDN), in one or more
+                  requests (e.g. HTTP GET). The first step in determining ISP ratings is to measure
+                  the sustained speed at which these video bytes are transferred from server to the
+                  client. To measure the achieved application level throughput (goodput), the
+                  following are recorded for each request:
+                </p>
+                <ol start="1">
+                  <li>
+                    <span class="number">1)</span> <strong>Request Identity:</strong> The
+                    originating request's timestamp, access network (e.g. network block, autonomous
+                    system number of ISP) and the coarse geographical location (e.g. country,
+                    metro), derived from client attributes such as IP address, User Agent, etc.
+                    Note that the IP to location translation done by our automated systems may
+                    return a location that is incorrect for some users.
+                  </li>
+                  <li>
+                    <span class="number">2)</span> <strong>Response Size:</strong> The number of
+                    application bytes (including application headers but excluding any kernel level
+                    overhead) transferred by the server to the client, in response to the request.
+                  </li>
+                  <li>
+                    <span class="number">3)</span> <strong>Response Time:</strong> The time taken
+                    to service the request by server, including network transmission time (all
+                    bytes acknowledged by the receiver).
+                  </li>
+                </ol>
+                <p>
+                  Based on these measurements, the goodput for a given request 'R' is computed
+                  using the formula below. Each measured request is considered a goodput sample.
+                </p>
+                <div class="chart infographic" id="infographic1">
+                  <div class="formula">
+                    Goodput
+                  </div>
+                  <div class="formula subscript">
+                    R
+                  </div>
+                  <div class="formula">
+                    = Response Size
+                  </div>
+                  <div class="formula subscript">
+                    R
+                  </div>
+                  <div class="formula">
+                    / Response Time
+                    <div class="formula subscript">
+                      R
+                    </div>
+                  </div>
+                </div>
+                <div class="detail_item_title_smaller">
+                  Ratings
+                </div>
+                <div class="detail_item_body">
+                  <p>
+                    Ratings are derived by aggregating relevant goodput samples recorded in the
+                    measurements phase. The methodology supports ratings to be computed at various
+                    levels of granularity, for the selected dimensions. For example, the rating for
+                    an ISP could be calculated for various time slices (e.g. hour, day, week,
+                    month) and/or at various geographical levels (e.g. country, province, metro,
+                    city).
+                  </p>
+                  <p>
+                    For a given time period 'T' (e.g. trailing 30 days) and a geographical location
+                    'L' (e.g. San Francisco, CA, USA), the rating for an ISP 'P' (e.g. Comcast) is
+                    computed as follows:
+                  </p>
+                  <ol start="1">
+                    <li>
+                      <span class="number">1)</span> <strong>Aggregate relevant samples:</strong>
+                      Collect all goodput samples that are identified with 'T', 'L' and 'P'. i.e.
+                      requests that were originated from within the target ISP, from the target
+                      location in the target timeframe.
+                    </li>
+                    <li>
+                      <span class="number">2)</span> <strong>Compute GAT Volume (Goodput Above
+                      Threshold):</strong> Place each goodput sample in one of the three capability
+                      buckets - HD (High Definition), SD (Standard definition) or LD (Lower
+                      definition) based on the goodput thresholds specified in the table below.
+                      This provides the raw aggregated GAT Volume for the selected dimensions.
+                    </li>
+                  </ol>
+                  <div class="chart table">
+                    <table name="gat_description">
+                      <thead>
+                        <tr>
+                          <th class="gat_bucket">
+                            GAT Bucket
+                          </th>
+                          <th class="gat_threshold">
+                            Goodput Threshold
+                          </th>
+                          <th class="gat_reasoning">
+                            Reasoning
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            HD (High Definition)
+                          </td>
+                          <td>
+                            &gt; 2.5 Mbps
+                          </td>
+                          <td>
+                            Minimum goodput required to sustain an average YouTube HD video
+                            playback at 720p resolution
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            SD (Standard Definition)
+                          </td>
+                          <td>
+                            0.7 to 2.5 Mbps
+                          </td>
+                          <td>
+                            Minimum goodput required to sustain an average YouTube SD video
+                            playback at 360p resolution
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            LD (Lower Definition)
+                          </td>
+                          <td>
+                            &lt; 0.7 Mbps
+                          </td>
+                          <td>
+                            Goodput too low to sustain YouTube SD video playback at 360p resolution
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="shadow default table_shadow"></div>
+                  <div class="chart extra_spacing infographic" id="infographic2">
+                    <div id="infographic2_background">
+                      <div class="methodology_graph1"></div>
+                    </div>
+                    <div class="label vertical" id="v_label">
+                      Volume (GAT)
+                    </div>
+                    <div class="label" id="h_label_1">
+                      HD Samples
+                    </div>
+                    <div class="label" id="h_label_2">
+                      SD Samples
+                    </div>
+                    <div class="label" id="h_label_3">
+                      LD Samples
+                    </div>
+                  </div>
+                  <ol start="3">
+                    <li>
+                      <p>
+                        <span class="number">3)</span> <strong>Define Rating Criteria:</strong> The
+                        ISP rating criteria is defined in terms of minimum level of GAT volume
+                        requirement for each rating level. Since this metric is designed to reflect
+                        consistency and reliability of the ISP's network, the bar needs to be set
+                        at a level that captures sustained performance rather than typical
+                        (average) performance. To that effect we define three rating scales: GAT-90
+                        (90% of requests above threshold), GAT-95 (95% of requests above
+                        threshold), GAT-99 (99% of requests above threshold) to reflect different
+                        levels of reliability.
+                      </p>
+                      <p>
+                        The following table defines the criteria used to determine the final ISP
+                        rating in our methodology, using GAT-90. The 90% bar is chosen after
+                        careful consideration of observed practical performance in the field. The
+                        bar will closely follow the evolving network capability over time.
+                      </p>
+                    </li>
+                  </ol>
+                  <div class="chart table">
+                    <table name="gat_description">
+                      <thead>
+                        <tr>
+                          <th>
+                            Rating
+                          </th>
+                          <th class="rating_criteria">
+                            Criteria (GAT-90)
+                          </th>
+                          <th class="rating_reasoning">
+                            Reasoning
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            HD (High Definition)
+                          </td>
+                          <td>
+                            90+% samples are<br>
+                            marked HD
+                          </td>
+                          <td>
+                            Network offers consistent and reliable YouTube HD (720p) performance
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            SD (Standard Definition)
+                          </td>
+                          <td>
+                            90+% samples are<br>
+                            marked at least SD
+                          </td>
+                          <td>
+                            Network offers consistent and reliable YouTube SD (360p) performance
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            LD (Lower Definition)
+                          </td>
+                          <td>
+                            Neither of the Above
+                          </td>
+                          <td>
+                            Network offers unreliable YouTube performance
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="shadow default table_shadow"></div>
+                  <ol start="4">
+                    <li>
+                      <span class="number">4)</span> <strong>Assign Rating:</strong> Stack the
+                      three GAT buckets from step 2 to convert raw GAT volume into GAT percentage.
+                      Determine the final rating using the criteria defined in step 3. In the
+                      illustration below, the assigned rating is SD (standard definition) since 90%
+                      or more requests meet this criteria. (i.e. the network is capable of offering
+                      at least SD quality for more than 90% of the served requests.)
+                    </li>
+                  </ol>
+                  <div class="chart infographic" id="infographic3">
+                    <div id="infographic3_background">
+                      <div class="methodology_graph2"></div>
+                    </div>
+                    <div class="label vertical" id="v_label">
+                      Percentage
+                    </div>
+                    <div class="label" id="h_label_1">
+                      100
+                    </div>
+                    <div class="label" id="h_label_2">
+                      90
+                    </div>
+                    <div class="label" id="h_label_3">
+                      80
+                    </div>
+                    <div class="label" id="h_label_4">
+                      70
+                    </div>
+                    <div class="label" id="h_label_5">
+                      60
+                    </div>
+                    <div class="label" id="h_label_6">
+                      50
+                    </div>
+                    <div class="label" id="h_label_7">
+                      40
+                    </div>
+                    <div class="label" id="h_label_8">
+                      30
+                    </div>
+                    <div class="label" id="h_label_9">
+                      20
+                    </div>
+                    <div class="label" id="h_label_10">
+                      10
+                    </div>
+                    <div class="label" id="h_label_11">
+                      0
+                    </div>
+                    <div class="label" id="h_label_hl">
+                      Rating at 90%: SD
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dd">
+              <div class="section_text_content_title nbm">
+                Privacy
+              </div>
+              <div class="detail_item_body">
+                <p>
+                  The ratings are centered around networks, not users. All goodput samples are
+                  completely anonymized and no user information (e.g. browser cookies, IP address)
+                  is persisted or used directly in the rating algorithm. Furthermore, if the
+                  aggregated sample volume for the selected geo level and time interval is below a
+                  certain threshold, the algorithm would fall back to using more coarse grained
+                  dimensions (i.e. aggregate by broader geo and/or time interval) that meet the
+                  minimum size requirements to compute the rating.
+                </p>
+              </div>
+            </div>
+            <div class="dd nbm">
+              <div class="section_text_content_title nbm" id="faq">
+                Frequently Asked Questions
+              </div>
+              <div class="detail_item_body">
+                <ol class="faq" start="1">
+                  <li>
+                    <span class="number">1)</span> <strong>ISPs sell many different internet
+                    products that promise different speeds. Does the methodology rate each product
+                    and speed separately?</strong><br>
+                    Each ISP can provide appropriate product names and speeds for its different
+                    offerings, and the labels in the report depend on the information we have from
+                    the ISP. In some cases, ISPs will provide us information that allows us to
+                    identify and rate the different products and speeds. In other cases, we don’t
+                    have detailed information about the speeds offered to consumers, so we provide
+                    a general rating of the product across all speeds.
+                  </li>
+                  <li>
+                    <span class="number">2)</span> <strong>Why is the bar set high at 90%? Why not
+                    use mean or median?</strong><br>
+                    At Google, we strongly believe that consistent and reliable network performance
+                    is key to a great user experience on the internet. Hence the choice of 90% bar.
+                    I.e. one can expect the rated level of performance 9 out of 10 times. While
+                    mean and median values are useful to represent average network performance,
+                    they are not well suited for the purpose of the rating metric which tries to
+                    capture the sustained level of the network performance.
+                  </li>
+                  <li>
+                    <span class="number">3)</span> <strong>Does this methodology recognize and
+                    reward networks that offer sustained high performance during high service usage
+                    hours?</strong><br>
+                    Yes. Since the GAT volume is request (load) based, high YouTube consumption
+                    time periods (e.g. evenings) would contribute more towards the GAT volume pool,
+                    thereby offering a disproportionate influence on the final rating. The
+                    methodology is naturally normalized for usage.
+                  </li>
+                  <li>
+                    <span class="number">4)</span> <strong>What type of server requests are
+                    qualified to be included in ratings computation?</strong><br>
+                    Requests serving video in modern delivery formats (e.g. DASH, HLS) are included
+                    in the ratings computation. Legacy video formats (e.g. non-adaptive progressive
+                    playbacks, RTSP) are excluded due to lack of high measurement confidence in
+                    older streaming delivery mechanisms. This is done in the interest of
+                    maintaining high degree of accuracy in computed ISP ratings.
+                  </li>
+                  <li>
+                    <span class="number">5)</span> <strong>What are factors within the user’s
+                    control that may influence their video quality experience?</strong><br>
+                    Individual results may vary depending on factors such as: the number of
+                    connected users or devices, your hardware, your software and software
+                    configuration, your connection to the internet (wireless of fixed), and whether
+                    you have exceeded your allotted data quota.
+                  </li>
+                  <li class="nbm hide-except country-DE">
+                    <span class="number">6)</span> <strong>For networks: Why aren’t my network’s
+                    results displaying?</strong><br>
+                    We strive to provide the most accurate results to our users. Using certain data
+                    thresholds and heuristics we only include networks available for residential
+                    use. If your results are not displaying or if you believe your results have
+                    been incorrectly categorized, please contact us at: <a href=
+                    "mailto:hdverified@google.com">hdverified@google.com</a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="learnmore">
+        <div class="learnmore_content">
+          <div class="shadow default"></div>
+          <div class="learnmore_content_inner">
+            <div class="learnmore_block_holder">
+              <div class="learnmore_block_video_quality block">
+                <div class="block_inner">
+                  <div class="block_image">
+                    <div class="learnmore_img_videoreport"></div>
+                  </div>
+                  <div class="block_header">
+                    Video Quality Report
+                  </div>
+                  <div class="block_text">
+                    See video quality results for Internet Providers in your area.
+                  </div>
+                </div>
+              </div>
+              <div class="learnmore_block_our_efforts block">
+                <div class="block_inner">
+                  <div class="block_image">
+                    <div class="learnmore_img_youtube"></div>
+                  </div>
+                  <div class="block_header">
+                    What YouTube is Doing
+                  </div>
+                  <div class="block_text">
+                    We want to make the web a faster place for everyone. Here's what we're doing.
+                  </div>
+                </div>
+              </div> <a href="//support.google.com/youtube/?p=video_checklist" target="_blank">
+              <div class="learnmore_block_support block">
+                <div class="block_inner">
+                  <div class="block_image">
+                    <div class="learnmore_img_support"></div>
+                  </div>
+                  <div class="block_header">
+                    YouTube Support
+                  </div>
+                  <div class="block_text">
+                    Troubleshooting tips for improving video playback.
+                  </div>
+                </div>
+              </div></a> 
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="share_overlay share_overlay_details share_overlay_relative">
+        <div class="share_container share_overlay_details_content">
+          <div class="share_buttons">
+            <span class="share_heading">Tell your friends about the report</span>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="footer_content">
+            <div class="footer-locales">
+              <label><span>Change language:</span> <select onchange=
+              "var href=this[this.selectedIndex].value;if(href!=''){window.location.href=href};">
+                <option selected value="">
+                </option>
+                <option value="/intl/da/get/videoqualityreport/index.html#methodology">
+                  Dansk
+                </option>
+                <option value="/intl/de/get/videoqualityreport/index.html#methodology">
+                  Deutsch
+                </option>
+                <option value="/intl/et/get/videoqualityreport/index.html#methodology">
+                  Eesti
+                </option>
+                <option value="/intl/en/get/videoqualityreport/index.html#methodology">
+                  English
+                </option>
+                <option value="/intl/es/get/videoqualityreport/index.html#methodology">
+                  Español
+                </option>
+                <option value="/intl/es-419/get/videoqualityreport/index.html#methodology">
+                  Español (Latinoamérica)
+                </option>
+                <option value="/intl/fr/get/videoqualityreport/index.html#methodology">
+                  Français
+                </option>
+                <option value="/intl/fr-CA/get/videoqualityreport/index.html#methodology">
+                  Français (Canada)
+                </option>
+                <option value="/intl/is/get/videoqualityreport/index.html#methodology">
+                  Íslenska
+                </option>
+                <option value="/intl/it/get/videoqualityreport/index.html#methodology">
+                  Italiano
+                </option>
+                <option value="/intl/lv/get/videoqualityreport/index.html#methodology">
+                  Latviešu
+                </option>
+                <option value="/intl/lt/get/videoqualityreport/index.html#methodology">
+                  Lietuvių
+                </option>
+                <option value="/intl/hu/get/videoqualityreport/index.html#methodology">
+                  Magyar
+                </option>
+                <option value="/intl/no/get/videoqualityreport/index.html#methodology">
+                  Norsk
+                </option>
+                <option value="/intl/pt-BR/get/videoqualityreport/index.html#methodology">
+                  Português (Brasil)
+                </option>
+                <option value="/intl/ro/get/videoqualityreport/index.html#methodology">
+                  Română
+                </option>
+                <option value="/intl/sk/get/videoqualityreport/index.html#methodology">
+                  Slovenčina
+                </option>
+                <option value="/intl/sl/get/videoqualityreport/index.html#methodology">
+                  Slovenščina
+                </option>
+                <option value="/intl/fi/get/videoqualityreport/index.html#methodology">
+                  Suomi
+                </option>
+                <option value="/intl/sv/get/videoqualityreport/index.html#methodology">
+                  Svenska
+                </option>
+                <option value="/intl/vi/get/videoqualityreport/index.html#methodology">
+                  Tiếng Việt
+                </option>
+                <option value="/intl/bg/get/videoqualityreport/index.html#methodology">
+                  Български
+                </option>
+                <option value="/intl/th/get/videoqualityreport/index.html#methodology">
+                  ไทย
+                </option>
+                <option value="/intl/ko/get/videoqualityreport/index.html#methodology">
+                  한국어
+                </option>
+              </select></label>
+            </div>
+            <div class="footer_menu">
+              <ul>
+                <li>
+                  <a href="//www.google.com" target="_blank">Google</a>
+                </li>
+                <li>
+                  <a href="//www.google.com/intl/en/policies/" target="_blank">Privacy & Terms</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
