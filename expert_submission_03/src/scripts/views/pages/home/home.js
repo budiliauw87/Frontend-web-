@@ -7,14 +7,15 @@ const Home = {
     return `
         <div class="jumbotron">
           <picture>
-            <source media="(max-width:600px)" 
-            srcset="./images/heros/hero-small.jpg" type="image/webp">
+            <source 
+            srcset="./images/heros/hero-small.webp 480w, 
+            ./images/heros/hero-medium.webp 800w, 
+            ./images/heros/hero-medium.webp 1000w" type="image/webp">
             <img 
             srcset="./images/heros/hero-small.jpg 480w, 
             ./images/heros/hero-medium.jpg 800w"
             src="./images/heros/hero-large.jpg" alt="This jumbotron image">
           </picture>
-          
         </div>
         <h2 class="subheading">
           <span class="line-center">Explore Restaurant</span>

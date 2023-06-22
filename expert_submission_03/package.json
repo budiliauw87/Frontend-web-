@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "idb": "^7.1.1",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
     "regenerator-runtime": "^0.13.9"
   }
 }
