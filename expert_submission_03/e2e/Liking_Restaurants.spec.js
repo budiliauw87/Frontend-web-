@@ -4,7 +4,7 @@ Feature('Liking Restaurants');
 Before(({I}) => {
   I.amOnPage('/#/favorite');
 });
-Scenario('showing empty liked movies', ({I}) => {
+Scenario('showing empty favorite restaurant', ({I}) => {
   I.seeElement('.wrapper-catalog');
   I.see('Favorite Empty !', '.title-error');
 });
@@ -29,7 +29,7 @@ Scenario('Adding favorite restaurant', async ({I}) => {
   assert.strictEqual(firstItemTitle, ItemFavoriteTitle);
 });
 
-Scenario('removing favorite restaurant', async ({I}) => {
+Scenario('Removing favorite restaurant', async ({I}) => {
   // go to detail pages
   I.see('Favorite Empty !', '.title-error');
   I.amOnPage('/');

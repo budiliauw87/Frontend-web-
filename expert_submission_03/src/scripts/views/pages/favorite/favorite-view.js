@@ -1,5 +1,7 @@
 import CONFIG from '../../../constant/config';
 import {placeholderItem} from '../../templates/placeholder-catalog';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 class FavoriteView {
   getTemplate() {
@@ -71,8 +73,8 @@ class FavoriteView {
 
   createFavoriteItemTemplate(restaurant) {
     return `<div class='catalog-item'>
-        <img src='${CONFIG.IMAGE_URL + restaurant.pictureId}' 
-        class='thumbnail' alt='${restaurant.name}'>
+        <img data-src='${CONFIG.IMAGE_URL + restaurant.pictureId}' 
+        class='thumbnail lazyload' alt='${restaurant.name}'>
         <div class='city'>${restaurant.city}</div>
         <a href='#/detail/${restaurant.id}'><h2>${restaurant.name}</h2></a>
         <div class='rating'><p>Ratings ${restaurant.rating}</p></div>

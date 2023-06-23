@@ -16,8 +16,8 @@ const Home = {
             <img 
             srcset="./images/heros/hero-small.jpg 480w, 
             ./images/heros/hero-medium.jpg 800w"
-            src="./images/heros/hero-large.jpg" alt="This jumbotron image" 
-            width="1000" height="300" >
+            data-src="./images/heros/hero-large.jpg" alt="This jumbotron image" 
+            width="1000" height="300" class="lazyload">
           </picture>
         </div>
         <h2 class="subheading">
@@ -51,7 +51,7 @@ const Home = {
       data.restaurants.forEach((resto) => {
         restaurantElement += `
           <div class='catalog-item'>
-              <img src='${CONFIG.IMAGE_URL + resto.pictureId}' 
+              <img data-src='${CONFIG.IMAGE_URL + resto.pictureId}' 
               class='thumbnail lazyload' alt='${resto.name}'>
               <div class='city'>${resto.city}</div>
               <a href='#/detail/${resto.id}'><h2>${resto.name}</h2></a>

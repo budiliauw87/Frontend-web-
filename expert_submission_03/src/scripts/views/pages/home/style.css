@@ -35,11 +35,10 @@
 
 .catalog-item .thumbnail {
     width: 100%;
-    min-height: 180px;
-    height: 180px;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     display: block;
+    aspect-ratio: 3/2;
 }
 
 .city {
@@ -128,7 +127,7 @@
     .jumbotron {
         border-radius: 1rem;
         margin: 16px auto 0;
-        width: 1000px;
+        width: 1000px !important;
     }
 
     .jumbotron img {
